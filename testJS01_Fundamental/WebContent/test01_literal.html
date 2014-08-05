@@ -3,6 +3,49 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript">
+	var su = 10;
+	var txt = "eclipse Luna";
+	var txt2 = 'Android';
+	var bool = true; // false
+	var silsu = 3.14;
+	var arr = [1,2,3,4,5];
+	var arr2 = ["aaa","bbb","ccc","ddd","eee","fff"];
+	var arr3 = ['xxx','yyy','zzz'];
+	var arr4 = [1, 'yyy', 3.14, true];
+	
+	
+	var obj = {};
+	var obj2 = {name:"Hong", tel:'112', addr:"Dong", age:40};
+	var obj3 = {name:"Hong", info:function(){}, data:{}}
+	
+	
+	function Test()	{
+		this.x=10;
+		this.y = 20;
+		this.sum = function()	{
+			return this.x + this.y;
+		}
+		
+		var su = 1000;
+		this.getSu = function()	{
+			return su;
+		}
+		
+	}
+	
+	var t = new Test();
+	console.log(t.x);
+	console.log(t.y);
+	console.log(t.sum());
+	console.log(t.su);
+	console.log(t.getSu());
+	
+	
+
+
+
+</script>
 </head>
 <body>
 
