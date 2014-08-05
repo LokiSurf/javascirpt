@@ -3,6 +3,40 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script type="text/javascript">
+	var su = 10;//전역변수
+	var su = 200;//전역변수
+	console.log("su:"+su);
+	txt = "30";
+	txt = "300";
+	function test(){
+		var x = 100;
+		console.log("x:"+x);
+		console.log("su:"+su);
+		console.log("y:"+y);
+		console.log("txt:"+txt);
+		
+		console.log(su+txt);
+		
+		
+		if(true){
+			var y = 200;
+		}
+		console.log("y:"+y);
+	}
+	
+	test();
+	
+	
+	try{
+		console.log(x);
+	}catch(e){
+		console.log(e);
+	}finally{
+		console.log("finally");
+	}
+	
+</script>
 </head>
 <body>
 	test javascript
