@@ -14,6 +14,10 @@ public class TestMain {
 		
 		for (int i : sus) {
 			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
 		}
 		
 	}
