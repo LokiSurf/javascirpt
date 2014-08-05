@@ -10,6 +10,16 @@ public class TestMain {
 //		
 //		System.out.println(x);
 		
+		int[] sus = {1,2,3,4,5};
+		
+		for (int i : sus) {
+			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
+			System.out.println(i);
+		}
+		
 	}
 
 }
