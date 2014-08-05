@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var arr = [];
+	arr[0] = 10;
+	arr[1] = 20;
+	arr[2] = 30;
+	arr[3] = 40;
+	
+	arr.push((arr.length+1)*10);
+	arr.push((arr.length+1)*10);
+	arr.push((arr.length+1)*10);
+	arr.push((arr.length+1)*10);//배열 뒤에 추가
+	
+	arr.shift();//배열 맨앞에꺼 제거
+	arr.pop();//배열 맨뒤에꺼 제거
+	
+	arr.unshift(1000);//배열 맨앞에 추가
+	
+	
+	for(var i in arr){
+		console.log(arr[i]);
+	}
+	
+	var arr2 = [1,2,3];
+	var arr3 = [4,5,6];
+	
+	var arr4 = arr2.concat(arr3);//배열 합치기
+	
+	for(var i in arr4){
+		console.log(arr4[i]);
+	}
+	
+	var arrs = [];
+	arrs[0] = new Array(1,2);
+	arrs[1] = new Array(3,4);
+	arrs[2] = new Array(5,6);
+	
+	for(var i=0;i<arrs.length;i++){
+		for(var j=0;j<arrs[i].length;j++){
+			console.log(arrs[i][j]);
+		}
+	}
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
