@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var su = 10;
+	var txt = "yangssem";
+	var tex2 = 'test';
+	var bool = true;//false
+	
+	var silsu = 3.14;
+	
+	var arr = [1,2,3,4,5];
+	var arr2 = ["aaa","bbb","ccc"];
+	var arr3 = ['xxx','yyy','zzz'];
+	var arr4 = [1,'yyy',3.14,true];
+	
+	var arr5 = new Array();
+	var arr6 = new Array(3);
+	var arr7 = new Array(3,4,5,6,7);
+	
+	for(var i in arr7){
+		console.log(arr7[i]);
+	}
+	
+	for(var i=0;i<arr4.length;i++){
+		console.log(arr4[i]);
+	}
+	
+	
+	
+	var obj = {};
+	var obj2 = {name:"Hong",tel:"010",addr:"seoul",age:40};
+	var obj3 = {name:"Hong",info:function(){},data:{kor:99,eng:100,math:98}};
+	console.log(obj3.name);
+	console.log(obj3.info);
+	console.log(obj3.data);
+	
+	
+	var obj4 = new Object();
+	obj4.name = "aaa";
+	obj4.tel = "080";
+	obj4.addr = "korea";
+	
+	console.log(obj4.name);
+	console.log(obj4.tel);
+	console.log(obj4.addr);
+	
+	for(var key in obj4){
+		console.log(obj4[key]);
+	}
+	
+	
+	function Test(){
+		this.x = 10;
+		this.y = 20;
+		this.sum = function(){
+			return this.x + this.y;
+		}
+		
+		var su = 1000;
+		this.getSu = function(){
+			return su;
+		}
+	}
+	
+	var t = new Test();
+	console.log(t.x);
+	console.log(t.y);
+	console.log(t.x + t.y);
+	console.log(t.sum());
+	console.log(t.su);//undefined
+	console.log(t.getSu());
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

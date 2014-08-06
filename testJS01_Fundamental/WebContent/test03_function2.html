@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function test(){
+		console.log("test()....");
+	}
+	function test2(){
+		console.log("test2()...."+arguments[0]+arguments[1]);
+	}
+	function test3(){
+		console.log("test3()...."+arguments[0]+arguments[1]+arguments[2]);
+	}
+	function test4(a,b,c){
+		console.log("test4()...."+(a+b+c));
+	}
+	
+	test();
+	test2(1,2);
+	test3(1,2,3);
+	test4(1,2,3);
+	
+	
+</script>
+</head>
+<body>
+	<button onclick="test()">button</button>
+	<p id="ppp">pppppp</p>
+</body>
+</html>
