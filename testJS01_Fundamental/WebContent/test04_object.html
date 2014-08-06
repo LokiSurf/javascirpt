@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="testObject.js"></script>
+<script>
+	var sdao = new ScoreDAO();
+
+	function insertFn() {
+		var sdtoIn = new ScoreDTO();
+
+		var korIn = document.getElementById("korIn").value;
+		var engIn = document.getElementById("engIn").value;
+		var mathIn = document.getElementById("mathIn").value;
+
+		sdtoIn.setKor(korIn);
+		sdtoIn.setEng(engIn);
+		sdtoIn.setMath(mathIn);
+
+		sdao.insert(sdtoIn);
+		selectFn();
+	}
+
+	function selectFn() {
+		var sdtos = sdao.select();
+
+		console.log("sdtos.length:" + sdtos.length);
+
+		for ( var i in sdtos) {
+			var obj = sdtos[i];
+			console
+					.log(obj.getKor() + "," + obj.getEng() + ","
+							+ obj.getMath());
+		}
+	}
+
+	function updateFn() {
+		var sdtoUp = new ScoreDTO();
+
+		var rowNumUp = document.getElementById("rowNumUp").value;
+		var korUp = document.getElementById("korUp").value;
+		var engUp = document.getElementById("engUp").value;
+		var mathUp = document.getElementById("mathUp").value;
+
+		console.log("updateFn:" + rowNumUp+","+ korUp+","+ engUp+","+ mathUp);
+		
+		sdtoUp.setKor(korUp);
+		sdtoUp.setEng(engUp);
+		sdtoUp.setMath(mathUp);
+		sdao.update(rowNumUp, sdtoUp);
+		
+		selectFn();
+	}
+
+	function deleteFn() {
+		var rowNumDel = document.getElementById("rowNumDel").value;
+		sdao.deleteData(rowNumDel);
+		selectFn();
+	}
+
+	window.onload = function() {
+		var p = new Person();
+
+		console.log(p.name);
+		console.log(p.tel);
+		console.log(p.info());
+		
+		selectFn();
+
+		document.getElementById("insertBtn").onclick = insertFn;
+		document.getElementById("updateBtn").onclick = updateFn;
+		document.getElementById("deleteBtn").onclick = deleteFn;
+	}
+</script>
+</head>
+<body>
+	<div>
+		<input type="number" id="korIn" value="99" /> <input type="number"
+			id="engIn" value="99" /> <input type="number" id="mathIn" value="99" />
+		<input type="button" id="insertBtn" value="insertBtn" />
+	</div>
+	<div>
+		<input type="number" id="rowNumUp" value="0" /> <input type="number"
+			id="korUp" value="88" /> <input type="number" id="engUp" value="88" />
+		<input type="number" id="mathUp" value="88" /> <input type="button"
+			id="updateBtn" value="updateBtn" />
+	</div>
+	<div>
+		<input type="number" id="rowNumDel" value="0" /> 
+		<input type="button"
+			id="deleteBtn" value="deleteBtn" />
+	</div>
+</body>
+</html>

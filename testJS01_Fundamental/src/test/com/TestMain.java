@@ -1,24 +1,23 @@
 package test.com;
 
+import java.util.ArrayList;
+
 public class TestMain {
 
 	public static void main(String[] args) {
-		int x;
-//		if(true){
-//			int x = 100;
-//		}
-//		
-//		System.out.println(x);
 		
-		int[] sus = {1,2,3,4,5};
+		ArrayList<Integer> list = new ArrayList<>();
 		
-		for (int i : sus) {
-			System.out.println(i);
-			System.out.println(i);
-			System.out.println(i);
-			System.out.println(i);
-			System.out.println(i);
+		
+		
+		for (int i = 0; i < 3; i++) {
+			list.add(1000+i);
 		}
+		
+		list.remove(2);
+		
+		list.set(1, 2222);
+		
 		
 	}
 
