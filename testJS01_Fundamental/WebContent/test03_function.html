@@ -7,14 +7,22 @@
 	
 	function test(){
 		console.log("test()....");
+		
+		document.getElementById("ppp").onclick = ppp;
+		
+		
 	}
 	
-	test();
+	function ppp(){
+		console.log("ppp()....");
+	}
 	
+	window.onload = test;	
 	
 </script>
 </head>
 <body>
-
+	<button onclick="test()">button</button>
+	<p id="ppp">pppppp</p>
 </body>
 </html>
